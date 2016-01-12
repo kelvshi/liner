@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei","Hiragino Sans GB","SimSun",sans-serif;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.clearfix:after {
+    content:".";display:block;height:0;clear:both;visibility:hidden
+}
+.clearfix {
+    *height: 1%;
+}
+
+@iterations: 20;
+
+.mixin-loop(@i) when (@i > 0) {
+    @size: @i*5;
+    .m@{size} {margin: ~'@{size}px';}
+    .mt@{size} {margin-top: ~'@{size}px';}
+    .mb@{size} {margin-bottom: ~'@{size}px';}
+    .ml@{size} {margin-left: ~'@{size}px';}
+    .mr@{size} {margin-right: ~'@{size}px';}
+    .p@{size} {padding: ~'@{size}px';}
+    .pt@{size} {padding-top: ~'@{size}px';}
+    .pb@{size} {padding-bottom: ~'@{size}px';}
+    .pl@{size} {padding-left: ~'@{size}px';}
+    .pr@{size} {padding-right: ~'@{size}px';}
+    .mixin-loop(@i - 1);
+}
+
+.mixin-loop(@iterations);
+
+.vat {
+    vertical-align: top;
+}
+.vab {
+    vertical-align: bottom;
+}
+.vam {
+    vertical-align: middle;
+}
+.fn_hide {
+    display: none;
+}
+.f_right {
+    float: right;
+}
+.f_left {
+    float: left;
+}
+.tx_l {
+    text-align: left;
+}
+.tx_c {
+    text-align: center;
+}
+.tx_r {
+    text-align: right;
+}
+/* 去除inline-block的间隙 */
+.tx_ns {
+    font-size: 0;
+    -webkit-text-size-adjust:none; /* 解决 webkit 内核限制最小字体大小问题 */
+}
+.dis_b {display:block} /*块级*/
+.dis_in {*display: inline;*zoom: 1;display:inline} /*内联*/
+.dis_inb {display:inline-block} /*内联块级*/ 
+.dis_none {display:none} /*隐藏*/ 
+.tx_unbr {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tx_br {
+    word-wrap: break-word;
+    word-break: normal;
+}
+.tx_unbr2 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.tx_12 {
+    font-size: 12px;
+}
+.tx_13 {
+    font-size: 13px;
+}
+.tx_14 {
+    font-size: 14px;
+}
+.tx_15 {
+    font-size: 15px;
+}
+.tx_16 {
+    font-size: 16px;
+}
+.tx_18 {
+    font-size: 18px;
+}
+.tx_b {
+    font-weight: bold;
+}
+.tx_n {
+    font-weight: normal;
+}
+.tx_udl {
+    text-decoration: underline;
+}
+.tx_del {
+    text-decoration: line-through;
+}
+.tx_song {
+    font-family: "Simsun";
+}
+.tx_yh {
+    font-family: "MicroSoft YaHei","SimHei";
+}
+.tx_lh_1 {
+    line-height: 1;
+}
+.tx_gray {
+    color: gray;
+}
+.pos_rel {
+    position: relative;
+}
+.pos_abs {
+    position: absolute;
+}

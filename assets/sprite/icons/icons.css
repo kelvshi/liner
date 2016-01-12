@@ -1,0 +1,17 @@
+.icon {
+    background-image: url('../images/icons_sprite.png');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.icon_arr_down {
+    width:  18px;
+    height: 11px;
+    background-position: 0px, 0px;
+} 
+.icon_arr_up {
+    width:  18px;
+    height: 11px;
+    background-position: -26px, 0px;
+} 
