@@ -1,0 +1,28 @@
+/**
+ * less common function
+ * @author: wyicwx@gmail.com
+ * @github: https://github.com/wyicwx
+ */
+.p_test .line {
+  animation-name: mymove;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes mymove {
+  0% {
+    width: 0;
+    height: 0;
+    boder: 0;
+  }
+  25% {
+    width: 1000px;
+    border-top: 4px solid #f20;
+  }
+  50% {
+    width: 1000px;
+    height: 100px;
+    border-right: 4px solid #f20;
+  }
+}

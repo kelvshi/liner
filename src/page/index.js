@@ -5,8 +5,12 @@ define('page/index', function(require, exports, module) {
         mainTain: true, // mainTain标志标明不销毁，viewWillRemoveStage、viewRemovedStage、destroy不会触发
         initialize: function() {
             var template = "/* include('../template/index/index.html', {minify: true, escape: true}) */";
-            this.$el.html(template);
-            console.log('[demo]状态 initialize');
+            var data = {
+                ss:"thisis",
+            }
+            var html = _.template(template)(data);
+            this.$el.html(html);
+            console.log('[index]状态 initialize');
         },
         viewWillAddStage: function() {
             console.log('[index]状态 viewWillAddStage');
@@ -31,10 +35,17 @@ define('page/index', function(require, exports, module) {
         }
     });
 
+    var DemoAction = IndexAction.extend({
+        initialize:function(){
+            console.log("初始化了这个demo!");
+        }
+    })
+
     module.exports = app.ControllerView.extend({
         defaultAction: 'index',
         Actions: {
-            index: IndexAction
+            index: IndexAction,
+            demo: DemoAction
         }
     });
 });

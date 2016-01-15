@@ -1,0 +1,12 @@
+/*定义一些公用产量*/
+@g_blue:#4285F4;
+@g_red:#EA4335;
+@g_orange:#FCBD06;
+@g_green:#34A853;
+@g_gray:#f2f2f2;
+
+.w_header{
+	height: 50px;
+	background: @g_blue;
+	text-align: center;
+}

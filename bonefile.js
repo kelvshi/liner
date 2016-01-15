@@ -28,6 +28,10 @@ staticDir.dest('css')
         return path.basename(fileProperty.dir) + '.css';
     });
 
+// dist/static/fonts
+staticDir.dest('fonts')
+    .src('~/vendors/fonticon/fonts/*');
+
 // dist/static/index.html
 staticDir.src('~/src/index.html')
     .act(include);
