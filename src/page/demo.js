@@ -1,8 +1,10 @@
 define('page/demo', function(require, exports, module) {
     var app = require('helper/base');
 
-    var IndexAction = app.ActionView.extend({
+    var IndexAction = app.SaasActionView.extend({
+        hasHeader: false, //不加载头部
         initialize: function() {
+            this._super();
             this.$el.html('<h1>demo页</h1>返回首页-> <a href="#/index">首页</a><br><div id="cs"></div>');
             console.log('[demo]状态 initialize');
         },

@@ -1,0 +1,64 @@
+/**
+ * widget
+ * 页面上切割的独立小块
+ */
+
+/*=============头部header============*/
+.w_header{
+	height: 40px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 5px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 40px;
+	background: @g_blue;
+	.left{
+		left: 10px;
+		width: 50px;
+	}
+	.center{
+		margin: 0 30%;
+		text-align: center;
+	}
+	.right{
+		top: 0;
+		right: 10px;
+		width: 50px;
+	}
+}
+
+/*=============左侧菜单==============*/
+.w_sidemenu{
+	width: 200px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: @g_blue;
+	.top{
+		height: 120px;
+		.g_red_bg(background,.3);
+		text-align: center;
+		border:1px solid #ccc;
+		.user-img{
+			border: 2px solid #ccc;
+			width: 60px;
+			height: 60px;
+			margin: 0 auto;
+			line-height: 60px;
+			border-radius: 60px;
+			background: #3D74CE;
+			font-size: 30px;
+			color: #fff;
+		}
+		.user-infor{
+			.name{
+
+			}
+			.job{
+
+			}
+		}
+	}
+	.bottom{}
+}

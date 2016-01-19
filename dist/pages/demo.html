@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>saas</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <style type="text/css">
+        	.navbar-brand{
+        		padding: 5px 15px;
+        	}
+        	.bottom-content{
+        		margin-top: 60px;
+        	}
+        	.bg_gray{
+        		background: #f2f2f2;
+        	}
+        </style>
+    </head>
+    <body>
+		<div class="container-fluid">
+			<!-- 头部加导航 -->
+			<div class="row">
+				<nav class="navbar navbar-inverse navbar-fixed-top">
+				      <div class="container">
+				        <div class="navbar-header">
+				          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				            <span class="sr-only">Toggle navigation</span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				          </button>
+				          <a class="navbar-brand" href="#"><img src="http://www.kezhanwang.cn/static/images/logo.png"></a>
+				        </div>
+				        <div id="navbar" class="navbar-collapse collapse">
+				          <ul class="nav navbar-nav">
+				            <li class="active"><a href="#">Home</a></li>
+				            <li><a href="#about">About</a></li>
+				            <li><a href="#contact">Contact</a></li>
+				            <li class="dropdown">
+				              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				              <ul class="dropdown-menu">
+				                <li><a href="#">Action</a></li>
+				                <li><a href="#">Another action</a></li>
+				                <li><a href="#">Something else here</a></li>
+				                <li role="separator" class="divider"></li>
+				                <li class="dropdown-header">Nav header</li>
+				                <li><a href="#">Separated link</a></li>
+				                <li><a href="#">One more separated link</a></li>
+				              </ul>
+				            </li>
+				          </ul>
+				        </div><!--/.nav-collapse -->
+				      </div>
+				    </nav>
+			</div>
+			<!-- 头部加导航 -->
+
+			<!-- 底下内容 -->
+			<div class="row bottom-content">
+				<!-- 左侧 -->
+				<div class="col-md-3">
+					<ul class="list-group">
+					  <li class="list-group-item active">Cras justo odio</li>
+					  <li class="list-group-item">Dapibus ac facilisis in</li>
+					  <li class="list-group-item">Morbi leo risus</li>
+					  <li class="list-group-item">Porta ac consectetur ac</li>
+					  <li class="list-group-item">Vestibulum at eros</li>
+					</ul>
+				</div>
+				<!-- 左侧 -->
+
+				<!-- 右侧 -->
+				<div class="col-md-9">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">查询条件</h3>
+					  </div>
+					  <div class="panel-body">
+					    <form class="form-inline">
+						  <div class="form-group col-xs-4">
+						    <label for="exampleInputName2">Name</label>
+						    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+						  </div>
+						  <div class="form-group col-xs-4">
+						    <label for="exampleInputEmail2">Email</label>
+						    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+						  </div>
+						  <button type="submit" class="btn btn-primary">查询</button>
+						  <button type="submit" class="btn btn-warning">导出</button>
+						</form>
+					  </div>
+					</div>
+
+					<table class="table table-bordered">
+					      <thead class="bg_gray">
+					        <tr>
+					          <th>#</th>
+					          <th>First Name</th>
+					          <th>Last Name</th>
+					          <th>Username</th>
+					        </tr>
+					      </thead>
+					      <tbody>
+					        <tr>
+					          <th scope="row">1</th>
+					          <td>Mark</td>
+					          <td>Otto</td>
+					          <td>@mdo</td>
+					        </tr>
+					        <tr>
+					          <th scope="row">2</th>
+					          <td>Jacob</td>
+					          <td>Thornton</td>
+					          <td>@fat</td>
+					        </tr>
+					        <tr>
+					          <th scope="row">3</th>
+					          <td>Larry</td>
+					          <td>the Bird</td>
+					          <td>@twitter</td>
+					        </tr>
+					      </tbody>
+					    </table>
+
+
+				</div>
+				<!-- 右侧 -->
+			</div>
+
+		</div>
+    </body>
+</html>

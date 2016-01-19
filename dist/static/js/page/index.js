@@ -4,13 +4,9 @@ define('page/index', function(require, exports, module) {
     var IndexAction = app.ActionView.extend({
         mainTain: true, // mainTain标志标明不销毁，viewWillRemoveStage、viewRemovedStage、destroy不会触发
         initialize: function() {
-            var template = "<div class=\"p_index\"><div class=\"w_header\"><div class=\"left\"></div><div class=\"content\">首页</div><div class=\"right\"></div></div></div>";
-            var data = {
-                ss:"thisis",
-            }
-            var html = _.template(template)(data);
-            this.$el.html(html);
-            console.log('[index]状态 initialize');
+            var template = "<h1>首页</h1>跳转到下个页面-><a href=\"#/demo\">demo页 <i class=\"fa fa-car\"></i></a><br><br>跳转到下个页面(带参数)-><a href=\"#/demo/id/1/sid/2\" class=\"btn btn-default\" role=\"button\" >demo页(带参数)</a><br><br>";
+            this.$el.html(template);
+            console.log('[demo]状态 initialize');
         },
         viewWillAddStage: function() {
             console.log('[index]状态 viewWillAddStage');
@@ -35,17 +31,10 @@ define('page/index', function(require, exports, module) {
         }
     });
 
-    var DemoAction = IndexAction.extend({
-        initialize:function(){
-            console.log("初始化了这个demo!");
-        }
-    })
-
     module.exports = app.ControllerView.extend({
         defaultAction: 'index',
         Actions: {
-            index: IndexAction,
-            demo: DemoAction
+            index: IndexAction
         }
     });
 });

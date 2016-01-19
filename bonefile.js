@@ -67,9 +67,11 @@ staticDir.dest('js')
     .act(concat({
         files: [
             '~/src/helper/*.js',
-            '~/src/model/*.js'
+            '~/src/model/*.js',
+            '~/src/widget/header.js',
         ]
-    }));
+    }))
+    .act(include);
 
 // dist/static/js/(other js)
 staticDir.dest('js')

@@ -1,2 +1,0 @@
-# liner
-backbone的helloworld

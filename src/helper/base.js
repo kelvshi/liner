@@ -83,7 +83,7 @@ define('helper/base', function(require, exports, module) {
      */
     app.BaseView = Backbone.View.extend({
         app: app,
-        constructor: function() {   
+        constructor: function() {
             this.ajaxQueue = [];
             Backbone.View.apply(this, arguments);
         },
@@ -136,11 +136,11 @@ define('helper/base', function(require, exports, module) {
 
     app.ActionView = app.BaseView.extend({
         onStage: false,
-        viewWillAddStage: function() {}, //视图将要添加到舞台触发
-        viewAddedStage: function() {},  //视图已经添加到舞台
-        viewBeActive: function() {}, //视图显示在舞台中
-        viewBeInActive: function() {}, //视图隐藏在舞台中
-        viewWillRemoveStage: function() {}, //第二个
+        viewWillAddStage: function() {},
+        viewAddedStage: function() {},
+        viewBeActive: function() {},
+        viewBeInActive: function() {},
+        viewWillRemoveStage: function() {},
         viewRemovedStage: function() {},
         destroy: function() {}
     });

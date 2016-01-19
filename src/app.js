@@ -94,5 +94,35 @@ define('app', function(require, exports, module) {
         return promise;
     };
 
+    // 公用的基本类，用来判断添加哪些组件
+    app.SaasActionView = app.ActionView.extend({
+        initialize: function() {
+            this._super();
+            // 引入header插件
+            var HeaderWidget = require('widget/header');
+            HeaderWidget.singleton();
+        }
+
+
+        // hasHeader: true,
+        // applyHeaderWidget: function() {
+        //     if(!this.widgetHeader){
+        //         this.widgetHeader = new HeaderWidget();
+        //     }
+        //     if(this.hasHeader){
+        //         this.widgetHeader.show();
+        //     }else{
+        //         this.widgetHeader.hide();
+        //     }
+        // },
+        // initialize: function() {
+        //     this._super();
+        //     this.applyHeaderWidget();
+        // }
+
+
+
+    });
+
     Backbone.history.start();
 });
