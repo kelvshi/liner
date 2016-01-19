@@ -3,18 +3,24 @@
 @g_red: rgb(234, 67, 53);
 @g_orange: rgb(251, 188, 5);
 @g_green: rgb(52, 168, 83);
-.g_blue_bg(@attr, @opacity){
+.g_blue_fn(@attr, @opacity){
 	@{attr}: rgba(66, 133, 244, @opacity);
 }
-.g_red_bg(@attr, @opacity){
+.g_red_fn(@attr, @opacity){
 	@{attr}: rgba(234, 67, 53, @opacity);
 }
-.g_orange_bg(@attr, @opacity){
+.g_orange_fn(@attr, @opacity){
 	@{attr}: rgba(251, 188, 5, @opacity);
 }
-.g_green_bg(@attr, @opacity){
+.g_green_fn(@attr, @opacity){
 	@{attr}: rgba(52, 168, 83, @opacity);
+}
+.g_white_fn(@attr, @opacity){
+	@{attr}: rgba(255, 255, 255, @opacity);
+}
+.g_black_fn(@attr, @opacity){
+	@{attr}: rgba(0, 0, 0, @opacity);
 }
 /*=======其他======*/
 @bg_gray:#f2f2f2; //淡灰色背景
-@bg_gray:#e7e7e7; //淡灰色边框
+@bd_gray:#e7e7e7; //淡灰色边框

@@ -30,18 +30,21 @@
 
 /*=============左侧菜单==============*/
 .w_sidemenu{
-	width: 200px;
+	width: 172px;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	background: @g_blue;
+	overflow: hidden;
 	.top{
 		height: 120px;
-		.g_red_bg(background,.3);
 		text-align: center;
-		border:1px solid #ccc;
+		padding: 20px 0 10px 0;
+		color: #fff;
+		.g_black_fn(background, .15);
+		border-bottom: 1px solid @bd_gray;
 		.user-img{
-			border: 2px solid #ccc;
+			border: 2px solid @bd_gray;
 			width: 60px;
 			height: 60px;
 			margin: 0 auto;
@@ -52,13 +55,64 @@
 			color: #fff;
 		}
 		.user-infor{
+			margin-top: 10px;
+			font-size: 14px;
 			.name{
-
+				font-size: 16px;
 			}
 			.job{
+				margin-top: 5px;
+				.left{
+					border-radius:3px;
+					padding: 2px 5px;
+					.g_orange_fn(background, .6);
+				}
+				.right{
+					margin-left: 5px;
+					font-size: 12px;
+					padding: 0 4px;
+					border-radius: 3px;
+					border: 1px solid @bd_gray;
+				}
 
 			}
 		}
 	}
-	.bottom{}
+	.bottom{
+		color: #fff;
+		text-align: center;
+		.menu-floor{
+			margin-bottom: 10px;
+			padding: 10px 0;
+			.menu-icon{
+				font-size: 32px;
+				line-height: 66px;
+				border-radius: 70px;
+				margin: 0 auto;
+				box-sizing: border-box;
+				border: 2px solid #e7e7e7;
+				width: 66px;
+				height: 66px;
+				cursor: pointer;
+				&:hover{
+					transition: .3s;
+					background: #fff;
+					border: 2px solid #fff;
+					color: @g_blue;
+				}
+			}
+			.menu-desc{
+				font-size: 18px;
+				color: #fff;
+			}
+			&.menu-app{
+				.menu-icon{
+					font-size: 48px;
+				}
+			}
+
+
+
+		}
+	}
 }
