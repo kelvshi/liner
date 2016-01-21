@@ -69,6 +69,7 @@ staticDir.dest('js')
             '~/src/helper/*.js',
             '~/src/model/*.js',
             '~/src/widget/header.js',
+            '~/src/widget/sideMenu.js',
         ]
     }))
     .act(include);

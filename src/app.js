@@ -1,5 +1,7 @@
 define('app', function(require, exports, module) {
     var app = require('helper/base');
+    // 左侧菜单插件
+    var sideMenuWidget = require("widget/sideMenu");
 
     app.autoload = function(module, callback) {
         require.async(module, callback);
@@ -96,31 +98,22 @@ define('app', function(require, exports, module) {
 
     // 公用的基本类，用来判断添加哪些组件
     app.SaasActionView = app.ActionView.extend({
+        hasSideMenu: true,
+        applySideMenuWidget: function() {
+            if(!this.widgetSideMenu){
+                this.widgetSideMenu = new sideMenuWidget();
+            }
+        },
         initialize: function() {
             this._super();
             // 引入header插件
             var HeaderWidget = require('widget/header');
-            HeaderWidget.singleton();
+            this.widgetHeader = HeaderWidget.singleton();
+            // 添加左侧菜单
+            // if(this.hasSideMenu){
+            //     this.applySideMenuWidget();
+            // }
         }
-
-
-        // hasHeader: true,
-        // applyHeaderWidget: function() {
-        //     if(!this.widgetHeader){
-        //         this.widgetHeader = new HeaderWidget();
-        //     }
-        //     if(this.hasHeader){
-        //         this.widgetHeader.show();
-        //     }else{
-        //         this.widgetHeader.hide();
-        //     }
-        // },
-        // initialize: function() {
-        //     this._super();
-        //     this.applyHeaderWidget();
-        // }
-
-
 
     });
 

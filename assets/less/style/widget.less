@@ -16,6 +16,7 @@
 	.left{
 		left: 10px;
 		width: 50px;
+		cursor: pointer;
 	}
 	.center{
 		margin: 0 30%;
@@ -32,10 +33,15 @@
 .w_sidemenu{
 	width: 172px;
 	top: 0;
-	left: 0;
+	left: -172px;
+	.transition(left ease 0.5s);
 	bottom: 0;
 	background: @g_blue;
 	overflow: hidden;
+	&.active{
+		left: 0;
+		.transition(left ease 0.3s);
+	}
 	.top{
 		height: 120px;
 		text-align: center;
